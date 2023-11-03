@@ -1,0 +1,17 @@
+nav {
+    justify-content: space-between;
+}
+
+.nav-links > a {
+    padding-inline: 2rem;
+    margin-inline: 0.5rem;
+}
+
+header {
+    padding-top: .5rem;
+    font-size: 1rem;
+}
+
+.logo {
+    font-size: 1.5rem;
+}

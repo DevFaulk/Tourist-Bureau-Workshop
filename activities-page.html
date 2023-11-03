@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Activites</title>
+
+    <!-- links -->
+    <link rel="stylesheet" href="styles/paper.css" />
+    <link rel="stylesheet" href="styles/activity.css" />
+    <link rel="stylesheet" href="styles/index.css" />
+    <link rel="stylesheet" href="styles/style.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="container-fluid">
+        <div class="logo">West Virginia Tourist Bureau</div>
+        <div class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="activities-page.html">Activities</a>
+          <a href="hiking-page.html">Hiking</a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <div class="card">
+        <div class="card-header">
+          <h4>Pick a category, then choose your activity!</h4>
+        </div>
+        <div class="card-body child-shadows">
+          <!-- category list -->
+          <div class="card-title sm-4 col border border-2 border-primary">
+            <label for="categoryList">Category</label>
+          </div>
+          <select
+            class="shadow shadow-hover"
+            name="categories"
+            id="categoryList">
+            <option value="">Select...</option>
+            <option value="">Adventures</option>
+            <option value="">Museums</option>
+            <option value="">Wine Tastings</option>
+          </select>
+
+          <!-- activity list -->
+          <div class="card-title sm-4 col border border-2 border-primary">
+            <label for="activityList">Activities</label>
+          </div>
+          <select
+            class="shadow shadow-hover"
+            name="activities"
+            id="activityList">
+            <option value="">Select...</option>
+            <option value="">Valley Hot Air Ballons</option>
+            <option value="">River Runners: Float Trip</option>
+            <option value="">Painting with a Twist: Oils</option>
+          </select>
+        </div>
+      </div>
+    </main>
+    <footer></footer>
+
+    <script src="activities.js"></script>
+  </body>
+</html>

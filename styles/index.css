@@ -1,0 +1,15 @@
+.double-hero {
+    flex-direction: row;
+    justify-content: space-around;
+    margin: auto;
+}
+
+.left-hero  {
+    width: 50%;
+    
+}
+
+.right-hero {
+    width: 50%;
+    flex-wrap: nowrap;
+}
