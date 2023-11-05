@@ -13,3 +13,7 @@
     width: 50%;
     flex-wrap: nowrap;
 }
+
+a:-webkit-any-link{
+    text-decoration: none !important;
+}

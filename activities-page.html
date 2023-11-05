@@ -26,7 +26,7 @@
     <main>
       <div class="card">
         <div class="card-header">
-          <h4>Pick a category, then choose your activity!</h4>
+          <h4 style="font-weight:bold; font-size: 2rem;">Pick a category, then choose your activity!</h4>
         </div>
         <div class="card-body child-shadows">
           <!--  -->
@@ -63,7 +63,10 @@
 
           <!-- submit button -->
           <div class="submit-button shadow-none">
-            <button type="button" id="displayResultOnClick" class="shadow">
+            <button
+              type="button"
+              id="displayResultOnClick"
+              class="shadow btn-secondary">
               Submit to see description!
             </button>
           </div>
@@ -80,11 +83,19 @@
           <span
             id="activityPrice"
             class="price-text card-text card-footer-items"
-            >Price:</span
-          >
-          <span class="card-text card-footer-items"
-            ><a href="" type="button">Buy?</a></span
-          >
+            >Price:
+          </span>
+          <span
+            style="text-decoration: none"
+            class="card-text card-footer-items footer-button-container">
+            <a
+              style="color: black; border-color: black"
+              class="footer-button btn-success"
+              href=""
+              type="button"
+              >Buy</a
+            >
+          </span>
         </div>
       </div>
     </main>

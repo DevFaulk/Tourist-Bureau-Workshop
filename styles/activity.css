@@ -1,10 +1,15 @@
 .card {
-  width: 35vw;
+  width: 45vw;
   min-width: 640px;
   height: 100%;
   border-radius: 16px;
   margin-bottom: 2rem;
   top: 50%;
+}
+
+h4 {
+  margin: .4rem;
+  text-align: center;
 }
 
 .card-title {
@@ -51,9 +56,18 @@ button {
 }
 
 .price-text {
-  font-size: 1.5rem;
+  font-size: 2rem;
 }
 
 .card-footer-items {
   padding-block: 0.1rem;
+}
+
+.footer-button {
+  padding-inline: 2rem;
+  font-size: 1.5rem;
+}
+
+#displayResultOnClick {
+  font-size: 1.2rem;
 }
