@@ -29,30 +29,62 @@
           <h4>Pick a category, then choose your activity!</h4>
         </div>
         <div class="card-body child-shadows">
+          <!--  -->
           <!-- category list -->
-          <div class="card-title col border border-2 border-primary">
-            <label for="categoryList">Category</label>
-          </div>
-          <select
-            class="shadow shadow-hover"
-            name="categories"
-            id="categoryList">
-            <option id="categorySelectMessage" value="select">Select...</option>
-          </select>
+          <section class="category-list shadow-none">
+            <div class="card-title col border border-2 border-primary">
+              <label for="categoryList">Category</label>
+            </div>
+            <select
+              class="shadow shadow-hover"
+              name="categories"
+              id="categoryList">
+              <option id="categorySelectMessage" value="select">
+                Select...
+              </option>
+            </select>
+          </section>
 
           <!-- activity list -->
-          <div class="card-title col border border-2 border-primary">
-            <label for="activityList">Activities</label>
+          <section class="activity-list shadow-none">
+            <div class="card-title col border border-2 border-primary">
+              <label for="activityList">Activities</label>
+            </div>
+            <select
+              class="shadow shadow-hover"
+              name="activities"
+              id="activityList">
+              <option
+                id="activitySelectMessage"
+                value="select"
+                style="color: gray"></option>
+            </select>
+          </section>
+
+          <!-- submit button -->
+          <div class="submit-button shadow-none">
+            <button type="button" id="displayResultOnClick" class="shadow">
+              Submit to see description!
+            </button>
           </div>
-          <select
-            class="shadow shadow-hover"
-            name="activities"
-            id="activityList">
-            <option
-              id="activitySelectMessage"
-              value="select"
-              style="color: gray"></option>
-          </select>
+
+          <!-- activity description -->
+          <section class="activity-description shadow-none">
+            <div class="card-subtitle">Activity Description:</div>
+            <p id="activityDescriptionMessage" class="card-text"></p>
+          </section>
+        </div>
+
+        <!-- card footer -->
+        <div class="card-footer">
+          <span
+            id="activityPrice"
+            class="price-text card-text card-footer-items"
+            >Price:</span
+          >
+          <span class="card-text card-footer-items"
+            ><a href="" type="button">Buy?</a></span
+          >
         </div>
       </div>
     </main>

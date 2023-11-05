@@ -1,13 +1,15 @@
 .card {
   width: 35vw;
+  min-width: 640px;
   height: 100%;
   border-radius: 16px;
   margin-bottom: 2rem;
+  top: 50%;
 }
 
 .card-title {
   font-size: 2rem;
-  padding: .5rem;
+  padding: 0.5rem;
   border-radius: 8px;
   width: 55%;
 }
@@ -22,14 +24,14 @@
 }
 
 #activityList {
-    margin-bottom: 3rem;
-    margin-top: 1rem;
-  }
+  margin-bottom: 2rem;
+  margin-top: 1rem;
+}
 
 select {
-    font-size: 1rem;
-    width: 75%;
-    height: 12%;
+  font-size: 1rem;
+  width: 75%;
+  height: 12%;
 }
 
 main {
@@ -38,6 +40,20 @@ main {
   margin-top: 5rem;
 }
 
-.card {
-    top: 50%;
+button {
+  margin-bottom: 2rem;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.price-text {
+  font-size: 1.5rem;
+}
+
+.card-footer-items {
+  padding-block: 0.1rem;
 }

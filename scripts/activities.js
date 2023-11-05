@@ -1,5 +1,16 @@
 "use strict";
 
+const categoryList = document.getElementById("categoryList");
+const activityList = document.getElementById("activityList");
+const categorySelectMessage = document.getElementById("categorySelectMessage");
+const activitySelectMessage = document.getElementById("activitySelectMessage");
+const activityDescriptionMessage = document.getElementById(
+  "activityDescriptionMessage"
+);
+const displayResultOnClick = document.getElementById("displayResultOnClick");
+const activityPrice = document.getElementById("activityPrice");
+
+// category list
 let categories = [
   "Adventures",
   "Arts & Crafts",
@@ -8,6 +19,7 @@ let categories = [
   "Other",
 ];
 
+// activity list
 let activities = [
   {
     category: "Adventures",
@@ -119,11 +131,7 @@ let activities = [
   },
 ];
 
-const categoryList = document.getElementById("categoryList");
-const activityList = document.getElementById("activityList");
-const categorySelectMessage = document.getElementById("categorySelectMessage");
-const activitySelectMessage = document.getElementById("activitySelectMessage");
-
+// function that lists categories from array "categories"
 function displayCategoryList() {
   for (const category of categories) {
     let option = new Option(category);
@@ -131,7 +139,7 @@ function displayCategoryList() {
     categoryList.appendChild(option);
   }
 }
-
+// function that lists activities from array "activities"
 function displayActivityList() {
   while (activityList.firstChild) {
     activityList.removeChild(activityList.firstChild);
@@ -150,15 +158,24 @@ function displayActivityList() {
     }
   }
 }
-
+// function that displays the description and buy feature for each activity
 function displayActivityDescriptionAndBuy() {
-  
+  for (const activity of activities) {
+    if (activity.id == activityList.value) {
+      activityDescriptionMessage.textContent = activity.description;
+      activityPrice.textContent = `Price: $${activity.price}`;
+    }
+  }
 }
 
 // function calls
 window.onload = function () {
   displayCategoryList();
   activitySelectMessage.textContent = "Please select a category first!";
+};
+
+displayResultOnClick.onclick = function () {
+  displayActivityDescriptionAndBuy();
 };
 
 categoryList.onchange = function () {
