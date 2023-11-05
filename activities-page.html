@@ -30,25 +30,28 @@
         </div>
         <div class="card-body child-shadows">
           <!-- category list -->
-          <div class="card-title sm-4 col border border-2 border-primary">
+          <div class="card-title col border border-2 border-primary">
             <label for="categoryList">Category</label>
           </div>
           <select
             class="shadow shadow-hover"
             name="categories"
             id="categoryList">
-            <option value="select">Select...</option>
+            <option id="categorySelectMessage" value="select">Select...</option>
           </select>
 
           <!-- activity list -->
-          <div class="card-title sm-4 col border border-2 border-primary">
+          <div class="card-title col border border-2 border-primary">
             <label for="activityList">Activities</label>
           </div>
           <select
             class="shadow shadow-hover"
             name="activities"
             id="activityList">
-            <option id="selectOption" value="select" style="color: gray;">Please select category first!</option>
+            <option
+              id="activitySelectMessage"
+              value="select"
+              style="color: gray"></option>
           </select>
         </div>
       </div>

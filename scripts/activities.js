@@ -121,7 +121,8 @@ let activities = [
 
 const categoryList = document.getElementById("categoryList");
 const activityList = document.getElementById("activityList");
-const selectOption = document.getElementById("selectOption");
+const categorySelectMessage = document.getElementById("categorySelectMessage");
+const activitySelectMessage = document.getElementById("activitySelectMessage");
 
 function displayCategoryList() {
   for (const category of categories) {
@@ -129,32 +130,37 @@ function displayCategoryList() {
     option.value = category;
     categoryList.appendChild(option);
   }
-
 }
 
-// Does not work properly
 function displayActivityList() {
-  for (const activity of activities) {
-    if (activity.category == categoryList.value) {
-      let option = new Option(activity.name);
-      activityList.appendChild(option);
+  while (activityList.firstChild) {
+    activityList.removeChild(activityList.firstChild);
+  }
+
+  if (categoryList.value === "select") {
+    let selectOption = new Option("Please select a category first!");
+    activityList.appendChild(selectOption);
+  } else {
+    for (const activity of activities) {
+      if (activity.category === categoryList.value) {
+        let option = new Option(activity.name);
+        option.value = activity.id;
+        activityList.appendChild(option);
+      }
     }
   }
 }
 
-// function displaySelectMessage() {
-//   if (categoryList.value == "select") {
-//     selectOption.innerText = "Please select category first!";
-//   } else if (categoryList.value != "select") {
-//     selectOption.hidden = true;
-//   }
-// }
+function displayActivityDescriptionAndBuy() {
+  
+}
 
 // function calls
 window.onload = function () {
   displayCategoryList();
+  activitySelectMessage.textContent = "Please select a category first!";
 };
 
-// categoryList.onchange = function () {
-//   displaySelectMessage();
-// };
+categoryList.onchange = function () {
+  displayActivityList();
+};

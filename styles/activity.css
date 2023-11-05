@@ -1,13 +1,15 @@
 .card {
-  height: 70vh;
-  width: 55vh;
+  width: 35vw;
+  height: 100%;
   border-radius: 16px;
+  margin-bottom: 2rem;
 }
 
 .card-title {
   font-size: 2rem;
   padding: .5rem;
   border-radius: 8px;
+  width: 55%;
 }
 
 .card-body {
