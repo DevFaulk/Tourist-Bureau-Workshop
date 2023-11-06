@@ -1,19 +1,25 @@
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+h1 {
+  filter: drop-shadow(3px 2px 4px black);
+  text-align: center;
+}
+
+img {
+  filter: drop-shadow(3px 2px 4px black);
+}
+
 .double-hero {
-    flex-direction: row;
-    justify-content: space-around;
-    margin: auto;
+  display: flex;
+  margin: auto;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-bottom: 25rem;
 }
 
-.left-hero  {
-    width: 50%;
-    
-}
-
-.right-hero {
-    width: 50%;
-    flex-wrap: nowrap;
-}
-
-a:-webkit-any-link{
-    text-decoration: none !important;
+a:-webkit-any-link {
+  text-decoration: none !important;
 }

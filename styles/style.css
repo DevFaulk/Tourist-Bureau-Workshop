@@ -2,13 +2,20 @@ nav {
   justify-content: space-between;
 }
 
+header nav {
+  display: flex;
+  padding: 1.5rem;
+  align-content: center;
+  background-color: rgba(200, 200, 200, 0.4);
+  backdrop-filter: blur(5px);
+}
+
 .nav-links > a {
   padding-inline: 2rem;
   margin-inline: 0.5rem;
 }
 
 header {
-  padding-top: 0.5rem;
   font-size: 1.3rem;
   font-weight: bold;
 }
@@ -24,4 +31,29 @@ select {
   height: 3rem;
   font-size: 1.3rem;
 }
- 
+
+.blur-bgimage {
+  overflow: hidden;
+  margin: 0;
+  text-align: left;
+}
+
+.blur-bgimage:before {
+  transform: scale(2);
+  content: "";
+  position: absolute;
+  width: 67%;
+  height: 100%;
+  background: inherit;
+  z-index: -1;
+
+  filter: blur(8px);
+  -moz-filter: blur(8px);
+  -webkit-filter: blur(8px);
+  -o-filter: blur(8px);
+
+  transition: all 2s linear;
+  -moz-transition: all 2s linear;
+  -webkit-transition: all 2s linear;
+  -o-transition: all 2s linear;
+}

@@ -8,11 +8,37 @@
     <!-- links -->
     <link rel="stylesheet" href="styles/paper.css" />
     <link rel="stylesheet" href="styles/activity.css" />
-    <link rel="stylesheet" href="styles/index.css" />
     <link rel="stylesheet" href="styles/style.css" />
   </head>
+  <style>
+    body {
+      color: white;
+    }
+    h1 {
+      color: white;
+    }
+
+    .nav-links > a {
+      color: white;
+      border-bottom: none;
+    }
+
+    select {
+      color: white;
+    }
+
+    .card-subtitle {
+      color: white !important;
+    }
+
+    .card-title,
+    #activityList,
+    #categoryList {
+      border-color: white;
+    }
+  </style>
   <body>
-    <header>
+    <header class="shadow">
       <nav class="container-fluid">
         <div class="logo">West Virginia Tourist Bureau</div>
         <div class="nav-links">
@@ -22,7 +48,11 @@
         </div>
       </nav>
     </header>
-
+    <div
+      style="
+        background-image: url(/images/new-river-gorge-scenic-2-1920x1080-1.jpeg);
+      "
+      class="blur-bgimage"></div>
     <main>
       <div class="card">
         <div class="card-header">
@@ -101,7 +131,9 @@
         </div>
       </div>
     </main>
-    <footer></footer>
+    <footer>
+      <h6>Copyright 2023</h6>
+    </footer>
 
     <script src="scripts/activities.js"></script>
   </body>
